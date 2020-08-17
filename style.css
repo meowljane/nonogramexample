@@ -1,0 +1,104 @@
+body{
+  font-size: 19px;
+  background: #ffffff;
+}
+h1{
+  text-align: center;
+}
+.border{
+  text-align:center;
+}
+.container{
+  display: inline-block;
+  margin: auto;
+}
+.column-container{
+  height: 5em;
+  margin: 0 0 0 5em;
+}
+.column{
+  width: 1em;
+  float: left;
+  border: 1px solid #000;
+  border-width: 0 1px 0 0;
+  height: inherit;  
+}
+.row-container, .grid{
+  float: left;
+  width: 5em;
+}
+.row{
+  width: 100%;
+  text-align: justify;
+  height: 1em;
+  border: 1px solid #000;
+  border-width: 0 0 1px 0;
+  display: table;
+ }
+.row div{
+  display: table-cell;
+  vertical-align: middle;  
+}
+.column div{
+  display: block;
+  margin: 2em 0 0 0;
+}
+.row div, .column div{
+  height: 0.8em;
+  text-align: center;
+  font-size: 0.5em;
+  line-height: 0.8em;  
+}
+
+*{
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+
+.grid{
+  width: 16em;
+  min-height: 1px;
+  line-height: 0;
+}
+
+button{
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  font-size: 1em;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
+  border-radius: 0px;
+  border: 1px outset rgba(0, 0, 0, 1);
+}
+button:active{
+  border-style: inset;
+}
+button.selected{
+  background: #000 !important;
+}
+.instructions{
+  float: left;
+  text-align: left;
+}
+.instructions div{
+  overflow: hidden;
+  max-width: 30em;
+  width: 0;
+  white-space: nowrap;
+  -webkit-transition:width 0.2s;
+    transition:width 0.2s;
+}
+.instructions .open{
+  width: 30em;
+  white-space: normal;
+}
+.absolute{
+  position: absolute;
+}
+.black{
+  background-color: #000;
+}

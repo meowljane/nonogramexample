@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Picross</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div ng-app="picross">
+  <h1>이 미궁은 한 페이지입니다..숨긴건 없어요</h1>
+  <div class="border">
+    <div ng-controller="PicrossController" class="container">
+      <div class="column-container">
+        <div class="column" ng-repeat="column in columnCounters">
+          <div ng-repeat="number in column">{{number.count}}</div>
+        </div>
+      </div>
+      <div class="row-container">
+      <div class="row" ng-repeat="row in rowCounters">
+        <div ng-repeat="number in row">{{number.count}}</div>
+      </div>
+      </div>
+      <div class="grid" ng-style="{width: width+'em', height: height + 'em'}">
+        <button 
+                ng-click="toggle(box)" 
+                ng-repeat="box in grid"
+                ng-class="{selected: box.isSelected}"></button>
+      </div>
+      <img id="img" style="display:none;" ng-src="{{src}}" ng-load="getGrid()">
+    </div>
+  </div>
+</div>
+<!-- partial -->
+  <script src='https://ajax.googleapis.com/ajax/libs/angularjs/1.3.2/angular.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
